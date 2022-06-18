@@ -11,7 +11,7 @@ import com.example.pruebawear.databinding.ActivityDialBBinding;
 
 public class DialActivityB extends Activity {
 
-    private TextView mTextView;
+    private TextView implementationText;
     private ActivityDialBBinding binding;
 
     @Override
@@ -21,9 +21,9 @@ public class DialActivityB extends Activity {
         binding = ActivityDialBBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        mTextView = binding.text;
+        implementationText = binding.text;
 
-        NotificationManager notifMan = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        notifMan.cancel(idNotification);
+        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        notificationManager.cancel(idNotification);
     }
 }
